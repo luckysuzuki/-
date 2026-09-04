@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 4bd4e6ef33fd2234fa4fcf36bf76cb74
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1776958003800183396
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_0
+  - first:
+      213: -5949181862697550114
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_1
+  - first:
+      213: 6266582444849553488
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_2
+  - first:
+      213: 8894993330215405510
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_3
+  - first:
+      213: 4285345061861866587
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_4
+  - first:
+      213: -6275919830956411573
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_5
+  - first:
+      213: 8565755836273791644
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_6
+  - first:
+      213: 4826461324196442237
+    second: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: toggle_option_used
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1633
+        width: 403
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9de3ba3c1af657e0800000000000000
+      internalID: -1776958003800183396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dropdown_default
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 591
+        width: 810
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede37b1bd92407da0800000000000000
+      internalID: -5949181862697550114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_2
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 1561
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050e4f4288f57f650800000000000000
+      internalID: 6266582444849553488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_3
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1568
+        width: 86
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c745fe5e4d517b70800000000000000
+      internalID: 8894993330215405510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slider_index
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1564
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c304801aa987b30800000000000000
+      internalID: 4285345061861866587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cexuan
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 1444
+        width: 370
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45730d3a2477e8a0800000000000000
+      internalID: -6275919830956411573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_6
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 799
+        width: 628
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9214ddbc8dafd670800000000000000
+      internalID: 8565755836273791644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: option_bk
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2565
+        height: 1447
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9ec67c92830e1488ad0c32f5d1e21a
+      internalID: -1874082818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dropdown_focus
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 510
+        width: 812
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dced5d2f7dd2b24d8d5fe4ffec5b33e
+      internalID: -2101746022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsss
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 285
+        width: 392
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65898602e5c8e23439f49a4378ec071d
+      internalID: 155689840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: option_toggle_default
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 214
+        width: 416
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a1da07e81ae9b48988c926f86b40a6
+      internalID: -257986029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slider_back
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1636
+        width: 804
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9111bb5e2c40a745be153aff1a1df9a
+      internalID: -1289767750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slider_fill
+      rect:
+        serializedVersion: 2
+        x: 3401
+        y: 129
+        width: 353
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 0, z: 70, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170c3618a7cbd5f49980c218f3e0153b
+      internalID: 1482759333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slider_fill_focus
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1664
+        width: 401
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 10, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb639a9dff8cf349ab43bd103308d25
+      internalID: -981763749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slider_index_focus
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1707
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a699ca9a789cd34a90c41c840fe0132
+      internalID: 1125635160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options_focus
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1448
+        width: 1992
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbb22f4300cd3f41a29e8a3bbd8f400
+      internalID: -1980609449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_0
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1688
+        width: 147
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2dc4142dbc9b8d4c823b93e3cef5b1d
+      internalID: -1976722195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toggle_on
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 1562
+        width: 406
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e418562b7996c4f946ace36d13257b
+      internalID: -1381687397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toggle focus
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1768
+        width: 406
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb665f89608d7c4193122c69f4f21f9
+      internalID: 1959555531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 603623f967bffc14abb46387d0e3db88
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Options_focus: -1980609449
+      cexuan: -6275919830956411573
+      dropdown_default: -5949181862697550114
+      dropdown_focus: -2101746022
+      option_bk: -1874082818
+      option_toggle_default: -257986029
+      optionsss: 155689840
+      sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_0: -1976722195
+      sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_2: 6266582444849553488
+      sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_3: 8894993330215405510
+      sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_6: 8565755836273791644
+      sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_7: 4826461324196442237
+      slider_back: -1289767750
+      slider_fill: 1482759333
+      slider_fill_focus: -981763749
+      slider_index: 4285345061861866587
+      slider_index_focus: 1125635160
+      toggle focus: 1959555531
+      toggle_on: -1381687397
+      toggle_option_used: -1776958003800183396
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

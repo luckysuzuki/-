@@ -244,13 +244,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cexuan
+      name: Common_button_default
       rect:
         serializedVersion: 2
-        x: 2007
-        y: 1444
-        width: 370
-        height: 153
+        x: 2020
+        y: 1461
+        width: 360
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,7 +538,7 @@ TextureImporter:
         width: 406
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -547,6 +547,160 @@ TextureImporter:
       bones: []
       spriteID: 6bb665f89608d7c4193122c69f4f21f9
       internalID: 1959555531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: common_button_focus
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 17
+        width: 360
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd89fca8781f96b4ea597dde3f0a2039
+      internalID: 726029585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: text_option_default
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1708
+        width: 100
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149d6a2f1d60d76498ffba19a62cbd67
+      internalID: 667722315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: text_option_focus
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 912
+        width: 100
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f0558d03a21054688250ca8cf67fd6
+      internalID: -1782819336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graphic_option_default
+      rect:
+        serializedVersion: 2
+        x: 3029
+        y: 659
+        width: 100
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cefa3d62cf5d2844a7fc8782fc99168
+      internalID: -1078201071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graphic_option_focus
+      rect:
+        serializedVersion: 2
+        x: 2991
+        y: 293
+        width: 100
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f27d4d79d5cce499c67b99c486110b
+      internalID: 1338161583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: audio_option_focus
+      rect:
+        serializedVersion: 2
+        x: 3097
+        y: 294
+        width: 100
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fa4d27c64f95347aa08601a7b766ae
+      internalID: 630038387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: audio_option_default
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 977
+        width: 100
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb409a3b3711494c9bbbc431ddcf1fb
+      internalID: 604057483
       vertices: []
       indices: 
       edges: []
@@ -565,16 +719,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Common_button_default: -6275919830956411573
       Options_focus: -1980609449
-      cexuan: -6275919830956411573
+      audio_option_default: 604057483
+      audio_option_focus: 630038387
+      common_button_focus: 726029585
       dropdown_default: -5949181862697550114
       dropdown_focus: -2101746022
+      graphic_option_default: -1078201071
+      graphic_option_focus: 1338161583
       option_bk: -1874082818
       option_toggle_default: -257986029
       optionsss: 155689840
       sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_0: -1976722195
       sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_2: 6266582444849553488
       sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_3: 8894993330215405510
+      sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_4: 1334768066
       sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_6: 8565755836273791644
       sactx-0-4096x2048-Crunch-UI_Options-c1cf4a46_7: 4826461324196442237
       slider_back: -1289767750
@@ -582,6 +742,8 @@ TextureImporter:
       slider_fill_focus: -981763749
       slider_index: 4285345061861866587
       slider_index_focus: 1125635160
+      text_option_default: 667722315
+      text_option_focus: -1782819336
       toggle focus: 1959555531
       toggle_on: -1381687397
       toggle_option_used: -1776958003800183396

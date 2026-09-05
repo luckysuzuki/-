@@ -20,7 +20,7 @@ namespace WitchTrial.UI
         public bool IsVisible => _isOpen && !_isCovered;
 
         public void RequestClose()
-        {
+        {    
             UIRouter.Close(this);
         }
 

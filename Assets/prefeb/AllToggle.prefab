@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIPointEnter
   EnterSprite: {fileID: 1959555531, guid: 4bd4e6ef33fd2234fa4fcf36bf76cb74, type: 3}
+  should_hide: 0
 --- !u!1 &1608260978171466474
 GameObject:
   m_ObjectHideFlags: 0

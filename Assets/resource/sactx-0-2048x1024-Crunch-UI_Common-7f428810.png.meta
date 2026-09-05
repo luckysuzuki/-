@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: e9eab5dd3f7829349931bf124ec4420a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9209865434808894952
+    second: sactx-0-2048x1024-Crunch-UI_Common-7f428810_0
+  - first:
+      213: 5330900272026966413
+    second: sactx-0-2048x1024-Crunch-UI_Common-7f428810_1
+  - first:
+      213: 2607959168565165558
+    second: sactx-0-2048x1024-Crunch-UI_Common-7f428810_2
+  - first:
+      213: 4603234478405193108
+    second: sactx-0-2048x1024-Crunch-UI_Common-7f428810_3
+  - first:
+      213: 7193811189397997915
+    second: sactx-0-2048x1024-Crunch-UI_Common-7f428810_4
+  - first:
+      213: -4790098232588573978
+    second: sactx-0-2048x1024-Crunch-UI_Common-7f428810_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sactx-0-2048x1024-Crunch-UI_Common-7f428810_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 639
+        width: 507
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a3119de2cff2080800000000000000
+      internalID: -9209865434808894952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x1024-Crunch-UI_Common-7f428810_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 838
+        width: 507
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8953379d892bf940800000000000000
+      internalID: 5330900272026966413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x1024-Crunch-UI_Common-7f428810_2
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 605
+        width: 247
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdbc07db05513420800000000000000
+      internalID: 2607959168565165558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_back_click
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 293
+        width: 233
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d0c2f7e59f1ef30800000000000000
+      internalID: 4603234478405193108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x1024-Crunch-UI_Common-7f428810_4
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 634
+        width: 522
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b594c4d892d85d360800000000000000
+      internalID: 7193811189397997915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x1024-Crunch-UI_Common-7f428810_5
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 608
+        width: 253
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2e4575907268db0800000000000000
+      internalID: -4790098232588573978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_back_default
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 58
+        width: 243
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cae1f4a0081cc4493a24031e54ffa1
+      internalID: 1387709293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_back_focus
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 48
+        width: 246
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4762c9955aacbb4fb471b8b244aa1e7
+      internalID: 925748427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 55b2735bf5d2ef649abdbae3a31e81f8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      button_back_click: 4603234478405193108
+      button_back_default: 1387709293
+      button_back_focus: 925748427
+      sactx-0-2048x1024-Crunch-UI_Common-7f428810_0: -9209865434808894952
+      sactx-0-2048x1024-Crunch-UI_Common-7f428810_1: 5330900272026966413
+      sactx-0-2048x1024-Crunch-UI_Common-7f428810_2: 2607959168565165558
+      sactx-0-2048x1024-Crunch-UI_Common-7f428810_4: 7193811189397997915
+      sactx-0-2048x1024-Crunch-UI_Common-7f428810_5: -4790098232588573978
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

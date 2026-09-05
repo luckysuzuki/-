@@ -124,7 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8744ebd95d92a43907b83632526c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIPointEnter
+  targetImage: {fileID: 0}
   EnterSprite: {fileID: -981763749, guid: 4bd4e6ef33fd2234fa4fcf36bf76cb74, type: 3}
+  should_hide: 0
 --- !u!1 &6077836467191848776
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8744ebd95d92a43907b83632526c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIPointEnter
+  targetImage: {fileID: 0}
   EnterSprite: {fileID: 1125635160, guid: 4bd4e6ef33fd2234fa4fcf36bf76cb74, type: 3}
+  should_hide: 0
 --- !u!1 &7405242633802911039
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +479,7 @@ GameObject:
   - component: {fileID: 3366751078554185265}
   - component: {fileID: 5922031431794156951}
   m_Layer: 0
-  m_Name: textspeed
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

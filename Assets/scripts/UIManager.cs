@@ -40,6 +40,27 @@ namespace WitchTrial.UI
 
         private void Awake()
         {
+            Initialize();
+        }
+
+        private void OnEnable()
+        {
+            // Unity invokes OnEnable again after an assembly/domain reload while
+            // the Editor is playing. Rebuild the non-serialized runtime state so
+            // the initial page is not left hidden after that reload.
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            var hasExpectedRuntimeState = Instance == this
+                && _instances.Count > 0
+                && (initialPage == null || _fullscreenStack.Count > 0);
+            if (hasExpectedRuntimeState)
+            {
+                return;
+            }
+
             if (Instance != null && Instance != this)
             {
                 Destroy(gameObject);
@@ -52,12 +73,21 @@ namespace WitchTrial.UI
                 DontDestroyOnLoad(gameObject);
             }
 
+            _instances.Clear();
+            _fullscreenStack.Clear();
+            _popupStack.Clear();
             EnsureHierarchy();
             RegisterScenePanels();
             UIRouter.Bind(this);
+            OpenInitialPageIfNeeded();
         }
 
         private void Start()
+        {
+            OpenInitialPageIfNeeded();
+        }
+
+        private void OpenInitialPageIfNeeded()
         {
             if (_fullscreenStack.Count == 0 && initialPage != null)
             {
@@ -227,7 +257,7 @@ namespace WitchTrial.UI
             CloseAllPopups();
 
             var existingIndex = _fullscreenStack.IndexOf(panel);
-            if (existingIndex == _fullscreenStack.Count - 1)
+            if (existingIndex >= 0 && existingIndex == _fullscreenStack.Count - 1)
             {
                 panel.RefreshInternal(context);
                 return;

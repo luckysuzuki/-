@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -47,7 +48,12 @@ namespace WitchTrial.UI.Panels
 
         public void ExitGame()
         {
-            Application.Quit();
+            UIRouter.Open<ConfirmPopUp>(new ConfirmContext
+            {
+                Message = "going to end the game",
+                ConfirmText =  "End",
+                OnConfirmed =new Action(Application.Quit)
+            });
         }
 
         private void AddListeners()

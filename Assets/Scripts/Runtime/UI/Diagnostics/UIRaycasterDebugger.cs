@@ -1,7 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// 输出指针位置的 UI 射线命中结果，用于排查点击和遮挡问题。
+/// </summary>
 public class UIRaycastDebugger : MonoBehaviour
 {
     private readonly List<RaycastResult> results = new();

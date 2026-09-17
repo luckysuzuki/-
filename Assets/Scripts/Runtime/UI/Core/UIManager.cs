@@ -409,6 +409,11 @@ namespace WitchTrial.UI
             for (var i = 0; i < _popupStack.Count; i++)
             {
                 _popupStack[i].transform.SetAsLastSibling();
+                var group = _popupStack[i].GetComponent<CanvasGroup>();
+                if (group != null) {
+                    group.interactable = i == _popupStack.Count - 1;
+                    group.blocksRaycasts = i == _popupStack.Count - 1;
+                }
             }
         }
 

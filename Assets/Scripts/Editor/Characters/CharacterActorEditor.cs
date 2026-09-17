@@ -1,10 +1,13 @@
-using System;
+﻿using System;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
 namespace WitchTrial.Characters.Editor
 {
+    /// <summary>
+    /// 在 Inspector 中提供角色部件、分支与预览相关的自定义编辑界面。
+    /// </summary>
     [CustomEditor(typeof(CharacterActor))]
     public sealed class CharacterActorEditor : UnityEditor.Editor
     {

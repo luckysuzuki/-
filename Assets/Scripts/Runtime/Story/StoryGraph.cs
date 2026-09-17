@@ -1,9 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace WitchTrial.Story
 {
+    /// <summary>
+    /// 保存剧情入口并校验从入口可达的节点连接和节点数据。
+    /// </summary>
     [CreateAssetMenu(fileName = "Story", menuName = "Witch Trial/Story/Graph")]
     public sealed class StoryGraph : ScriptableObject
     {
@@ -27,14 +30,25 @@ namespace WitchTrial.Story
                 var choice = node as ChoiceNode;
                 var trial = node as TrialNode;
                 var end = node as EndNode;
+                var transition = node as TransitionNode;
                 if (dialogue != null)
                 {
                     if (dialogue.lines == null || dialogue.lines.Length == 0)
                         errors.Add(label + ": 对话至少需要一句。");
                     else for (var i = 0; i < dialogue.lines.Length; i++)
+                    {
                         if (dialogue.lines[i] == null || string.IsNullOrWhiteSpace(dialogue.lines[i].text))
                             errors.Add(label + ": 第 " + i + " 句为空。");
+                        else StoryStage.ValidateLine(dialogue.lines[i], label + ".lines[" + i + "]", errors);
+                    }
                     AddTarget(dialogue.next, label + ".next", pending, errors);
+                }
+                else if (transition != null)
+                {
+                    foreach (var duration in new[] { transition.fadeOutSeconds, transition.minimumBlackSeconds, transition.fadeInSeconds })
+                        if (float.IsNaN(duration) || float.IsInfinity(duration) || duration < 0)
+                            errors.Add(label + ": 转场时长必须是非负有限数值。");
+                    AddTarget(transition.next, label + ".next", pending, errors);
                 }
                 else if (choice != null)
                 {

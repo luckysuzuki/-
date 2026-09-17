@@ -1,10 +1,13 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using WitchTrial.Settings;
 
 namespace WitchTrial.UI.Panels
 {
+    /// <summary>
+    /// 显示并编辑文字、画面、语言、帧率和音量等游戏设置。
+    /// </summary>
     public sealed class OptionsPanel : UIPanel
     {
         [Header("Text tab")]

@@ -1,8 +1,11 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace WitchTrial.Settings
 {
+    /// <summary>
+    /// 列出视觉小说界面支持的语言选项。
+    /// </summary>
     public enum VisualNovelLanguage
     {
         SimplifiedChinese = 0,
@@ -11,6 +14,9 @@ namespace WitchTrial.Settings
         English = 3
     }
 
+    /// <summary>
+    /// 列出设置界面可选择的窗口分辨率。
+    /// </summary>
     public enum Resolutions
     {
         _2560x1440 = 0,
@@ -19,11 +25,17 @@ namespace WitchTrial.Settings
         _1280x720 = 3
     }
 
+    /// <summary>
+    /// 列出设置界面可选择的最大帧率。
+    /// </summary>
     public enum MaxFps
     {
         _60fps = 0,
         _30fps=1
     }
+    /// <summary>
+    /// 保存视觉小说文字、画面、语言和音量等用户设置。
+    /// </summary>
     [Serializable]
     public sealed class VisualNovelSettingsData
     {

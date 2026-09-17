@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,6 +12,9 @@ using WitchTrial.Story;
 
 namespace WitchTrial.Characters.Editor
 {
+    /// <summary>
+    /// 从角色布局数据导入纹理、部件、分支、预制体和默认姿态资源。
+    /// </summary>
     public static class CharacterImporter
     {
         public const string Root = "Assets/Characters/Imported";

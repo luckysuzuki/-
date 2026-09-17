@@ -1,8 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace WitchTrial.UI
 {
+    /// <summary>
+    /// 列出按钮适配器支持的打开、替换、关闭和返回导航动作。
+    /// </summary>
     public enum UIAction
     {
         Open,

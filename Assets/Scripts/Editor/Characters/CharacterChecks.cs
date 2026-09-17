@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json.Linq;
@@ -8,6 +8,9 @@ using WitchTrial.Story;
 
 namespace WitchTrial.Characters.Editor
 {
+    /// <summary>
+    /// 运行角色数据的编辑器检查，验证部件、分组、分支与姿态配置。
+    /// </summary>
     public static class CharacterChecks
     {
         [MenuItem("Witch Trial/Characters/Run Character Checks (Play Mode)")]

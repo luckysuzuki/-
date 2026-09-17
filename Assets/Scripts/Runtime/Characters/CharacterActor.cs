@@ -1,9 +1,12 @@
-using System;
+﻿using System;
 using System.Linq;
 using UnityEngine;
 
 namespace WitchTrial.Characters
 {
+    /// <summary>
+    /// 描述角色的一个可切换视觉部件及其所属分组和渲染对象。
+    /// </summary>
     [Serializable]
     public sealed class CharacterPart
     {
@@ -14,6 +17,9 @@ namespace WitchTrial.Characters
         public bool optional;
     }
 
+    /// <summary>
+    /// 描述角色头部或层级中的一个可见分支及其根对象。
+    /// </summary>
     [Serializable]
     public sealed class CharacterBranch
     {

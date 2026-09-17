@@ -1,7 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace WitchTrial.UI
 {
+    /// <summary>
+    /// 提供所有全屏页面和弹窗共用的生命周期、可见性与关闭行为。
+    /// </summary>
     [DisallowMultipleComponent]
     public abstract class UIPanel : MonoBehaviour
     {

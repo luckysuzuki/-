@@ -1,15 +1,19 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace WitchTrial.Story
 {
-    public enum StoryRunnerState { Idle, Dialogue, Choice, Trial, Completed }
+    /// <summary>
+    /// 表示剧情运行器当前等待的交互类型或播放阶段。
+    /// </summary>
+    public enum StoryRunnerState { Idle, Dialogue, Choice, Trial, Completed, Transition }
 
     /// <summary>唯一剧情推进入口。UI 负责展示，Runner 负责进度与跳转。</summary>
     public sealed class StoryRunner : MonoBehaviour
     {
         [SerializeField] private StoryGraph story;
         [SerializeField] private bool playOnStart;
+        [SerializeField] private StoryChapter chapter;
 
         private bool _executing;
         public StoryGraph Story => story;
@@ -18,6 +22,32 @@ namespace WitchTrial.Story
         public int LineIndex { get; private set; } = -1;
         public string SelectedKeywordId { get; private set; }
         public string LastError { get; private set; }
+        public StoryChapter Chapter => chapter;
+        public StoryStage CurrentStage { get; private set; } = new StoryStage();
+        public StoryTransition CurrentTransition { get; private set; }
+        public bool CanAdvance => State == StoryRunnerState.Dialogue;
+        public bool CanSave => !_executing && (State == StoryRunnerState.Dialogue || State == StoryRunnerState.Choice || State == StoryRunnerState.Trial);
+
+        public bool Restore(ResolvedStorySave save)
+        {
+            return Execute(() => {
+                if (save == null || save.graph == null || save.node == null || save.stage == null)
+                    return Reject("存档数据不完整。");
+                story = save.graph; chapter = save.chapter;
+                CurrentTransition = null; CurrentNode = save.node;
+                LineIndex = save.lineIndex; SelectedKeywordId = save.selectedKeywordId;
+                CurrentStage = save.stage;
+                State = CurrentNode is DialogueNode ? StoryRunnerState.Dialogue :
+                    CurrentNode is ChoiceNode ? StoryRunnerState.Choice : StoryRunnerState.Trial;
+                Publish(PlaybackStarted);
+                Publish(NodeEntered, CurrentNode);
+                Publish(StageChanged, CurrentStage);
+                if (State == StoryRunnerState.Dialogue) Publish(DialogueLineChanged, CurrentLine);
+                else if (State == StoryRunnerState.Trial && !string.IsNullOrEmpty(SelectedKeywordId))
+                    Publish(KeywordSelected, Array.Find(((TrialNode)CurrentNode).keywords, k => k.id == SelectedKeywordId));
+                return true;
+            });
+        }
         public DialogueLine CurrentLine
         {
             get
@@ -35,13 +65,43 @@ namespace WitchTrial.Story
         public event Action<bool> TrialResolved;
         public event Action<EndNode> Completed;
         public event Action Stopped;
+        public event Action PlaybackStarted;
+        public event Action<StoryStage> StageChanged;
+        public event Action<StoryTransition> TransitionRequested;
+        public event Action<StoryChapter> ChapterCompleted;
 
         private void Start()
         {
             if (playOnStart) Play();
         }
 
-        public bool Play() => Play(story);
+        public bool Play() => chapter != null ? PlayChapter(chapter) : Play(story);
+
+        public bool PlayChapter(StoryChapter value)
+        {
+            return Execute(() =>
+            {
+                if (value == null) return Reject("未配置章节。");
+                var errors = value.Validate();
+                if (errors.Count > 0) return Reject(string.Join("\n", errors));
+                Begin(value.graph, value);
+                return true;
+            });
+        }
+
+        private void Begin(StoryGraph graph, StoryChapter value)
+        {
+            story = graph;
+            chapter = value;
+            CurrentTransition = null;
+            CurrentNode = null;
+            State = StoryRunnerState.Idle;
+            LineIndex = -1;
+            CurrentStage = new StoryStage();
+            Publish(PlaybackStarted);
+            Publish(StageChanged, CurrentStage);
+            Enter(graph.entry);
+        }
 
         /// <summary>重新开始。校验失败时保留当前运行进度。</summary>
         public bool Play(StoryGraph graph)
@@ -51,8 +111,7 @@ namespace WitchTrial.Story
                 if (graph == null) return Reject("未配置 StoryGraph。");
                 var errors = graph.Validate();
                 if (errors.Count > 0) return Reject(string.Join("\n", errors));
-                story = graph;
-                Enter(graph.entry);
+                Begin(graph, null);
                 return true;
             });
         }
@@ -68,6 +127,7 @@ namespace WitchTrial.Story
                 if (LineIndex + 1 < node.lines.Length)
                 {
                     LineIndex++;
+                    ApplyLineStage();
                     Publish(DialogueLineChanged, CurrentLine);
                 }
                 else Enter(node.next);
@@ -129,12 +189,47 @@ namespace WitchTrial.Story
                 State = StoryRunnerState.Idle;
                 LineIndex = -1;
                 SelectedKeywordId = null;
+                CurrentTransition = null;
+                CurrentStage = new StoryStage();
+                Publish(StageChanged, CurrentStage);
                 Publish(Stopped);
                 return true;
             });
         }
 
-        private void Enter(StoryNode node)
+        public bool PrepareTransition(StoryTransition request)
+        {
+            return Execute(() =>
+            {
+                if (State != StoryRunnerState.Transition || request == null || request != CurrentTransition)
+                    return Reject("转场请求已失效。");
+                if (request.IsPrepared) return true;
+                CurrentStage = StoryStage.Resolve(CurrentStage, request.Node.next.lines[0]);
+                request.IsPrepared = true;
+                Publish(StageChanged, CurrentStage);
+                return true;
+            });
+        }
+
+        public bool CompleteTransition(StoryTransition request)
+        {
+            return Execute(() =>
+            {
+                if (State != StoryRunnerState.Transition || request == null || request != CurrentTransition || !request.IsPrepared)
+                    return Reject("转场已失效或尚未准备完成。");
+                CurrentTransition = null;
+                Enter(request.Node.next, true);
+                return true;
+            });
+        }
+
+        private void ApplyLineStage()
+        {
+            CurrentStage = StoryStage.Resolve(CurrentStage, CurrentLine);
+            Publish(StageChanged, CurrentStage);
+        }
+
+        private void Enter(StoryNode node, bool stagePrepared = false)
         {
             CurrentNode = node;
             LineIndex = -1;
@@ -142,10 +237,24 @@ namespace WitchTrial.Story
             if (node is DialogueNode) { State = StoryRunnerState.Dialogue; LineIndex = 0; }
             else if (node is ChoiceNode) State = StoryRunnerState.Choice;
             else if (node is TrialNode) State = StoryRunnerState.Trial;
+            else if (node is TransitionNode transition)
+            {
+                State = StoryRunnerState.Transition;
+                CurrentTransition = new StoryTransition(transition);
+            }
             else State = StoryRunnerState.Completed;
             Publish(NodeEntered, node);
-            if (State == StoryRunnerState.Dialogue) Publish(DialogueLineChanged, CurrentLine);
-            else if (State == StoryRunnerState.Completed) Publish(Completed, (EndNode)node);
+            if (State == StoryRunnerState.Dialogue)
+            {
+                if (!stagePrepared) ApplyLineStage();
+                Publish(DialogueLineChanged, CurrentLine);
+            }
+            else if (State == StoryRunnerState.Transition) Publish(TransitionRequested, CurrentTransition);
+            else if (State == StoryRunnerState.Completed)
+            {
+                Publish(Completed, (EndNode)node);
+                if (chapter != null) Publish(ChapterCompleted, chapter);
+            }
         }
 
         private bool Execute(Func<bool> operation)

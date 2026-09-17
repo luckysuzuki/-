@@ -1,7 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// 在指针进入或离开 UI 元素时切换目标图片的高亮精灵。
+/// </summary>
 public class UIPointEnter : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Tooltip("要切换 Sprite 的图片。留空时使用当前 GameObject 上的 Image。")]

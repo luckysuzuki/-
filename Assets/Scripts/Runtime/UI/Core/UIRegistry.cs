@@ -1,9 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace WitchTrial.UI
 {
+    /// <summary>
+    /// 维护面板类型到预制体的注册表，供界面管理器按类型创建实例。
+    /// </summary>
     [CreateAssetMenu(fileName = "UIRegistry", menuName = "Witch Trial/UI/UI Registry")]
     public sealed class UIRegistry : ScriptableObject
     {

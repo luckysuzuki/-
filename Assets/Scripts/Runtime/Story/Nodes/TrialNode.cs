@@ -1,8 +1,11 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace WitchTrial.Story
 {
+    /// <summary>
+    /// 描述审判证言中的一段文本及其可关联的关键词。
+    /// </summary>
     [Serializable]
     public sealed class TrialTextPart
     {
@@ -11,6 +14,9 @@ namespace WitchTrial.Story
         public string keywordId;
     }
 
+    /// <summary>
+    /// 描述证言关键词及能够正确反驳它的理由标识。
+    /// </summary>
     [Serializable]
     public sealed class TrialKeyword
     {
@@ -19,6 +25,9 @@ namespace WitchTrial.Story
         public string correctReasonId;
     }
 
+    /// <summary>
+    /// 描述玩家在审判中可以提交的一个反驳理由。
+    /// </summary>
     [Serializable]
     public sealed class TrialReason
     {
@@ -26,6 +35,9 @@ namespace WitchTrial.Story
         [TextArea] public string text;
     }
 
+    /// <summary>
+    /// 组织证言、关键词和理由，并根据判断结果进入成功或失败节点。
+    /// </summary>
     [CreateAssetMenu(fileName = "Trial", menuName = "Witch Trial/Story/Trial")]
     public sealed class TrialNode : StoryNode
     {

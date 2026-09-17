@@ -1,7 +1,10 @@
-using System;
+﻿using System;
 
 namespace WitchTrial.UI
 {
+    /// <summary>
+    /// 定义界面路由所需的面板打开、替换、关闭、返回和查询操作。
+    /// </summary>
     public interface IUIService
     {
         event Action<UIPanel> PanelOpened;

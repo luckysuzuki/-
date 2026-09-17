@@ -24,11 +24,6 @@ namespace WitchTrial.UI.Panels
         [FormerlySerializedAs("ExitButton")]
         [SerializeField] private Button exitButton;
 
-        [Header("Application actions")]
-        [SerializeField] private UnityEvent onLoadGame;
-        [SerializeField] private UnityEvent onNewGame;
-        [SerializeField] private UnityEvent onOpenGallery;
-
         public override UILayer Layer => UILayer.Fullscreen;
 
         private void OnEnable()
@@ -74,8 +69,19 @@ namespace WitchTrial.UI.Panels
             exitButton?.onClick.RemoveListener(ExitGame);
         }
 
-        private void InvokeLoadGame() => onLoadGame?.Invoke();
-        private void InvokeNewGame() => onNewGame?.Invoke();
-        private void InvokeOpenGallery() => onOpenGallery?.Invoke();
+        private void InvokeLoadGame()
+        {
+            UIRouter.Open<SaveAndLoadPanel>();
+        }
+
+        private void InvokeNewGame()
+        {
+            
+        }
+
+        private void InvokeOpenGallery()
+        {
+            
+        }
     }
 }

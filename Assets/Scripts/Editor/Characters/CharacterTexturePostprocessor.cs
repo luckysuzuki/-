@@ -1,10 +1,13 @@
-using System.IO;
+﻿using System.IO;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 
 namespace WitchTrial.Characters.Editor
 {
+    /// <summary>
+    /// 在角色纹理导入后应用项目约定的贴图与精灵设置。
+    /// </summary>
     public sealed class CharacterTexturePostprocessor : AssetPostprocessor
     {
         private void OnPreprocessTexture()
